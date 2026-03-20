@@ -1,4 +1,5 @@
 import { NavLink } from "react-router"
+import Logo from "../../public/Logo.png"
 export default function ChiSiamo() {
     return (
         <>
@@ -13,9 +14,13 @@ export default function ChiSiamo() {
             </div>
 
             <div className="container mt-5">
-                <div className="card">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum ullam explicabo ducimus quibusdam unde.</h1>
+                <div>
+                    <img id="logo" src={Logo} alt="" />
                 </div>
+                    
+                    <div className="card-body">
+                         <p>Benvenuti su ePay, l'e-commerce progettato per semplificare la tua vita quotidiana. Abbiamo unito la tecnologia più avanzata nel campo dei pagamenti digitali a una selezione infinita di prodotti, creando un'esperienza di shopping sicura, veloce e senza confini.</p>
+                    </div>
             </div>
         </>
 
