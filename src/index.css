@@ -1,0 +1,11 @@
+@import url('bootstrap');
+
+#img_products{
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.card{
+    height: 100%;
+}
