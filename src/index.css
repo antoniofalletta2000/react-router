@@ -1,5 +1,11 @@
 @import url('bootstrap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #img_products{
     width: 100%;
     object-fit: contain;
@@ -18,3 +24,23 @@
     object-fit: contain;
     aspect-ratio: 1/1;
 }
+
+#logo_nav{
+  height: 40px;      
+  width: auto;       
+  max-width: 100%;
+}
+
+span{
+    color: rgb(225, 72, 16);
+}
+
+#logo_home{
+    height: 20rem;
+    object-fit: contain;
+}
+
+#btn_home{
+    background-color: rgb(225, 72, 16);
+}
+

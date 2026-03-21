@@ -1,6 +1,6 @@
 import { NavLink } from "react-router"
 import { useState, useEffect } from "react"
-
+import Logo from "../../public/Logo3.png"
 const endpoint = "https://fakestoreapi.com/products"
 
 
@@ -17,16 +17,22 @@ export default function Prodotti() {
 
     return (
         <>
-            <div className="bg-dark">
+            <div className="bg-white">
                 <div className="container mt-2">
-                    <nav className="d-flex justify-content-around">
-                        <button className="btn"><NavLink className="text-decoration-none text-white" to="/">Home</NavLink></button>
-                        <button className="btn"><NavLink className="text-decoration-none text-white" to="/Chisiamo">Chi siamo</NavLink></button>
-                        <button className="btn"><NavLink className="text-decoration-none text-white" to='/Prodotti'>Prodotti</NavLink></button>
+                    <nav className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-between">
+                        <div className="col">
+                            <img id="logo_nav" src={Logo} alt="" />
+                        </div>
+                        <div className="col d-flex gap-1">
+                            <button className="btn"><NavLink className="text-decoration-none" to="/"><span className="fw-bold">Home</span></NavLink></button>
+                            <button className="btn"><NavLink className="text-decoration-none" to="/Chisiamo"><span className="fw-bold">Chi siamo</span></NavLink></button>
+                            <button className="btn"><NavLink className="text-decoration-none" to='/Prodotti'><span className="fw-bold">Prodotti</span></NavLink></button>
+                        </div>
+
                     </nav>
                 </div>
             </div>
-            
+
             <div className="container">
                 <div className="row row-col-1 row-cols-sm-2 row-cols-md-3">
                     {products.map(product => (
