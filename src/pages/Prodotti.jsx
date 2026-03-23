@@ -39,11 +39,14 @@ export default function Prodotti() {
                         <div key={product.id} className="col p-2">
                             <div className="card p-3 bg-light">
                                 <img id="img_products" className="img-fluid" src={product.image} alt="" />
-                                <div className="card-body bg-white rounded-top">
-                                    <div className="d-flex justify-content-center text-center" >
+                                <div id="cards_products" className="card-body rounded-top">
+                                    <div className="fw-bold d-flex flex-column justify-content-center text-center text-white" >
+                                        <h4>Prodotto:</h4>
                                         <h6>{product.title}</h6>
                                     </div>
-                                    <div className="d-flex text-center justify-content-center">
+                                    <hr />
+                                    <div className="d-flex flex-column text-center justify-content-center text-white">
+                                        <h4>Descrizione:</h4>
                                         <p>{product.description}</p>
                                     </div>
 
