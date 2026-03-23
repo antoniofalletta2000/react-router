@@ -1,4 +1,4 @@
-import { NavLink } from "react-router"
+import { NavLink,Link } from "react-router"
 import { useState, useEffect } from "react"
 import Logo from "../../public/Logo3.png"
 const endpoint = "https://fakestoreapi.com/products"
@@ -51,7 +51,9 @@ export default function Prodotti() {
                                 <div className="d-flex justify-content-center text-center bg-white rounded-bottom" >
                                     <h3>{product.price}€</h3>
                                 </div>
-
+                                <div>
+                                    <Link to={`/prodotti/${product.id}`}>Vai al prodotto</Link>
+                                </div>
                             </div>
                         </div>
                     ))}
