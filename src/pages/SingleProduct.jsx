@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Logo from "../../public/Logo3.png"
 import { NavLink, Link } from "react-router"
 
@@ -7,7 +7,7 @@ export default function SingleProduct() {
 
 
     const { id } = useParams()
-
+    const navigate = useNavigate()
     const endpoint = `https://fakestoreapi.com/products/${id}`
     const [product, setProduct] = useState(null)
     useEffect(() => {
@@ -17,8 +17,9 @@ export default function SingleProduct() {
             .then(data =>
 
                 setProduct(data)
-            )
-    }, [id])
+            ).catch(err=>{
+                navigate("/prodotti")
+            })}, [id,navigate])
 
 
     return (

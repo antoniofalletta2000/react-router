@@ -51,7 +51,7 @@ export default function Prodotti() {
                                 <div className="d-flex justify-content-center text-center bg-white rounded-bottom" >
                                     <h3>{product.price}€</h3>
                                 </div>
-                                <div>
+                                <div className="d-flex justify-content-end">
                                     <Link to={`/prodotti/${product.id}`}>Vai al prodotto</Link>
                                 </div>
                             </div>
